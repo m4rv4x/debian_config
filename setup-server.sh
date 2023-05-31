@@ -4,7 +4,7 @@
 sudo apt-get update && sudo apt-get upgrade -y
 
 # Install system admin packages
-sudo apt-get install htop nmap byobu curl speedtest-cli -y
+sudo apt-get install htop nmap byobu curl speedtest-cli gcc g++ make -y
 
 # Install Latest node.js
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
