@@ -30,6 +30,9 @@ chsh -s $(which zsh)
 # Install neofetch and exa
 sudo apt-get install neofetch exa -y
 
+# Import zsh config file
+wget https://raw.githubusercontent.com/m4rv4x/debian_config/main/.zshrc -o .zshrc
+
 # Clean up
 sudo apt-get autoremove -y
 sudo apt-get clean
