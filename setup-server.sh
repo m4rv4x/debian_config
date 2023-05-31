@@ -24,5 +24,3 @@ sudo apt-get install neofetch exa -y
 # Clean up
 sudo apt-get autoremove -y
 sudo apt-get clean
-
-
