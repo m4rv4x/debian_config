@@ -85,3 +85,4 @@ alias la='exa -a --color=always --group-directories-first --icons'
 alias ll='exa -al --color=always --group-directories-first --icons'
 alias ls='exa --color=always --group-directories-first --icons'
 alias update="sudo apt update && sudo apt upgrade"
+alias diskusage="sudo ncdu"
