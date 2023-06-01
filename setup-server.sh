@@ -27,8 +27,8 @@ sudo usermod -aG docker $USER
 sudo apt-get install zsh -y
 chsh -s $(which zsh)
  
-# Install neofetch and exa
-sudo apt-get install neofetch exa -y
+# Install some cli packages
+sudo apt-get install neofetch ncdu exa -y
 
 # Import zsh config file
 wget https://raw.githubusercontent.com/m4rv4x/debian_config/main/.zshrc -o .zshrc
