@@ -27,8 +27,8 @@ sudo usermod -aG docker $USER
 sudo apt-get install zsh -y
 chsh -s $(which zsh)
  
-# Install some cli tools
-sudo apt-get install neofetch exa -y
+# Install neofetch and exa
+sudo apt-get install neofetch exa ncdu -y
 
 # Install Oh My Zsh for better zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
