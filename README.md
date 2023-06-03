@@ -1,4 +1,4 @@
-# On First install sudo ? (or not)
+## need to update docker-compose
 
 ## Install sudo and add SUDOERS
 Login as root :
