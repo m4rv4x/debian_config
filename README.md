@@ -3,10 +3,5 @@
 ## Debian Server Install
 
 ```
-./setup-server.sh
+./setup.sh
 ```
-
-
-## Debian X11 Install
-
-(best is yet to come)
