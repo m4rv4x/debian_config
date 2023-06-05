@@ -1,20 +1,5 @@
 ## need to update docker-compose
 
-## Install sudo and add SUDOERS
-Login as root :
-```
-su  # enter root password
-```
-install sudo and add sudoers
-```
-apt install sudo
-echo "${USER} ALL=(ALL:ALL) ALL" > /etc/sudoers.d/$USER
-exit
-```
-Done !  Go back to normal user
-```exit```
-
-
 ## Debian Server Install
 
 ```
