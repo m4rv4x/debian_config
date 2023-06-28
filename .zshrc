@@ -112,11 +112,7 @@ alias nano="micro"
 alias la='exa -a --color=always --group-directories-first --icons'                                                                            
 alias ll='exa -al --color=always --group-directories-first --icons'
 alias ls='exa --color=always --group-directories-first --icons'
-
 alias update="sudo apt update && sudo apt upgrade"
-<<<<<<< HEAD
 alias activate="python3 -m venv myenv && source myenv/bin/activate"
 alias quick-share="python3 -m http.server"
-=======
 alias diskusage="sudo ncdu"
->>>>>>> e778007878d19193a21957f6625a132ce4c786e4
