@@ -3,3 +3,5 @@
 ```
 ./setup.sh
 ```
+
+Will install docker-compose to last
