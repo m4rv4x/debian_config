@@ -36,6 +36,11 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 # Upgrading zsh again
 wget https://raw.githubusercontent.com/m4rv4x/debian_config/main/.zshrc -o ~/.zshrc
 
+# Upgrade docker-compose to version 3
+sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+
 # Clean up
 sudo apt-get autoremove -y
 sudo apt-get clean
