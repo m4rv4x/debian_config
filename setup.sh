@@ -34,3 +34,6 @@ cp ./.zshrc ~/.zshrc
 # Clean up
 sudo apt-get autoremove -y
 sudo apt-get clean
+
+# Init GitHub account
+gh auth login
