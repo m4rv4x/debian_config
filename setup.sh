@@ -37,3 +37,4 @@ sudo apt-get clean
 
 # Init GitHub account
 gh auth login
+echo "[!] Install Done"
