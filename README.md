@@ -5,6 +5,6 @@
 ```
 
 ### Works on
-Debian 11
-Debian 12
-Kali
+- Debian 11
+- Debian 12
+- Kali
