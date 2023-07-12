@@ -1,5 +1,11 @@
-## Debian Server Install
+## Debian Apps & Custom Configuration
+### Including
+- Dev Packages
+- CLI apps
+- custom ZSH
+- some aliases
 
+  
 ```
 ./setup.sh
 ```
