@@ -4,5 +4,7 @@
 ./setup.sh
 ```
 
-### Update
-Will install docker-compose to last
+### Works on
+Debian 11
+Debian 12
+Kali
