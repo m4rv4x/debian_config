@@ -103,16 +103,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# some m4rv4x custom
-export VISUAL=micro                                                                         
-export EDITOR=micro
-
-alias nano="micro"
-
-alias la='exa -a --color=always --group-directories-first --icons'                                                                            
-alias ll='exa -al --color=always --group-directories-first --icons'
-alias ls='exa --color=always --group-directories-first --icons'
-alias update="sudo apt update && sudo apt upgrade"
-alias activate="python3 -m venv myenv && source myenv/bin/activate"
-alias quick-share="python3 -m http.server"
-alias diskusage="sudo ncdu"
+source $ZSH/oh-my-zsh.sh
