@@ -30,6 +30,8 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 # Upgrading zsh again
 cp ./.zshrc ~/.zshrc
+echo "source ~/.m4rc" >> ~/.zshrc
+mv ./.m4rc ~/.m4rc
 
 # Clean up
 sudo apt-get autoremove -y
