@@ -26,8 +26,8 @@ rm -r ~/rvm.sh
 # Install system admin packages
 sudo apt-get install htop nmap micro netcat byobu curl speedtest-cli gcc g++ make zsh neofetch exa ncdu curl wget  -y
 # Install useful developer packages
-sudo apt-get install build-essential nodejs python3 git gh python3-venvapt-transport-https ca-certificates gnupg lsb-release -y
-
+sudo apt-get install build-essential nodejs python3 git python3-venvapt-transport-https ca-certificates gnupg lsb-release -y
+pip install gh
 
 # Install zsh and set as default shell
 chsh -s $(which zsh)
