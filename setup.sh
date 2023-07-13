@@ -30,16 +30,15 @@ sudo apt-get install build-essential nodejs python3 git python3-venvapt-transpor
 # Install some Python packages
 wget https://github.com/cli/cli/releases/download/v2.32.0/gh_2.32.0_linux_amd64.deb
 sudo dpkg -i gh_2.32.0_linux_amd64.deb
+
 # Install zsh and set as default shell
 chsh -s $(which zsh)
- 
 # Install Oh My Zsh for better zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # Upgrading zsh again
 cp ./.zshrc ~/.zshrc
 echo "source ~/.m4rc" >> ~/.zshrc
-mv ./.m4rc ~/.m4rc
+cp ./.m4rc ~/.m4rc
 
 # Clean up
 sudo apt-get autoremove -y
