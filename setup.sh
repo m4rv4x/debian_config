@@ -28,8 +28,8 @@ sudo apt-get install htop nmap micro netcat byobu curl speedtest-cli gcc g++ mak
 # Install useful developer packages
 sudo apt-get install build-essential nodejs python3 git python3-venvapt-transport-https ca-certificates gnupg lsb-release -y
 # Install some Python packages
-pip install gh
-
+wget https://github.com/cli/cli/releases/download/v2.32.0/gh_2.32.0_linux_amd64.deb
+sudo dpkg -i gh_2.32.0_linux_amd64.deb
 # Install zsh and set as default shell
 chsh -s $(which zsh)
  
