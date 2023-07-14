@@ -38,7 +38,6 @@ chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # Upgrading zsh again
 cp ./.zshrc ~/.zshrc
-echo "source ~/.m4rc" >> ~/.zshrc
 cp ./.m4rc ~/.m4rc
 
 # Clean up
