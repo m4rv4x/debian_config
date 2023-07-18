@@ -3,7 +3,7 @@ storage="/hdd"
 # Ask the user for input to confirm removing containers
 read -p "[?] Do you want to remove all running containers and volumes? (yes/NO): " choice
 
-if [[ $choice == "yes" || $choice == "y" ]]; then
+if [[ $choice == "yes" || $choice == "y" || $choice == "Y" || $choice == "YES"]]; then
    # Stop and remove all running containers
    echo "[-] REMOVING CONTAINERS AND VOLUMES"
    docker stop $(docker ps -aq)
@@ -99,6 +99,7 @@ docker run -d \
   --restart unless-stopped \
   lscr.io/linuxserver/airsonic
 ##################################################################################
+echo "[+] RUNNING NEW CONTAINER : GUACAMOLE"
 docker run -d \
   --name=guacamole \
   -p 86:8080 \
