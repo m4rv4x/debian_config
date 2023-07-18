@@ -36,9 +36,6 @@ sudo apt-get install build-essential nodejs python3 git python3-venvapt-transpor
 chsh -s $(which zsh)
 # Install Oh My Zsh for better zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# Upgrading zsh again
-cp ./.zshrc ~/.zshrc
-cp ./.m4rc ~/.m4rc
 
 # Clean up
 sudo apt-get autoremove -y
