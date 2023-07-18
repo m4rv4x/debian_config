@@ -25,7 +25,6 @@ docker run -d --name=netdata \
    -v /proc:/host/proc:ro \
    -v /sys:/host/sys:ro \
    -v /var/run/docker.sock:/var/run/docker.sock \
-   --cap_add SYS_PTRACE \
    --security-opt apparmor=unconfined \
    netdata/netdata
 ########################################################################
