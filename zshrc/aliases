@@ -1,0 +1,29 @@
+# M4RV4X CUSTOM ZSHRC
+export VISUAL=micro                                                                         
+export EDITOR=micro
+alias nano='micro'
+
+# TOOLS
+alias la='exa -a --color=always --group-directories-first --icons'                                                                            
+alias ll='exa -al --color=always --group-directories-first --icons'
+alias ls='exa --color=always --group-directories-first --icons'
+alias update='sudo apt update && sudo apt upgrade'
+alias quick-share='python3 -m http.server'
+alias diskusage='sudo ncdu'
+alias ifconfig='sudo ifconfig'
+alias gpt='python3 ~/gpt.cli gpt.py'
+
+# DEV
+alias activate='python3 -m venv myenv && source myenv/bin/activate'
+alias python='python3'
+
+# LAPTOP SPECS
+# WIFI
+wiface="wlp7s0"
+alias wconnect="nmcli device connect $wiface"
+alias wdisconnect="nmcli device disconnect $wiface"
+alias wreconnect="wdisconnect ; sleep 2 ; wconnect"
+alias wenable="nmcli device set $wiface managed yes"
+alias wdisable="nmcli device set $wiface managed no"
+# TOUCHPAD TAP
+synclient TapButton1=1
