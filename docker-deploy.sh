@@ -3,7 +3,7 @@ storage="/hdd"
 # Ask the user for input to confirm removing containers
 read -p "[?] Do you want to remove all running containers and volumes? (yes/NO): " choice
 
-if [[ $choice == "yes" || $choice == "y" || $choice == "Y" || $choice == "YES"]]; then
+if [[ $choice == "yes" || $choice == "y" || $choice == "Y" || $choice == "YES" ]]; then
    # Stop and remove all running containers
    echo "[-] REMOVING CONTAINERS AND VOLUMES"
    docker stop $(docker ps -aq)
