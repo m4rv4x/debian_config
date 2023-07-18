@@ -17,6 +17,9 @@ alias gpt='python3 ~/gpt.cli gpt.py'
 alias activate='python3 -m venv myenv && source myenv/bin/activate'
 alias python='python3'
 
+# CRYPTO
+alias crypto="more https://rate.sx/:help"
+
 # LAPTOP SPECS
 # WIFI
 wiface="wlp7s0"
