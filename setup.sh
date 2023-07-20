@@ -28,6 +28,8 @@ sudo dpkg -i gh_2.32.0_linux_amd64.deb
 
 # Install system admin packages
 sudo apt-get install htop nmap micro netcat byobu curl speedtest-cli gcc g++ make zsh neofetch exa ncdu curl wget  -y
+byobu-ctrl-a screen
+byobu-enable
 
 # Install useful developer packages
 sudo apt-get install build-essential nodejs python3 git python3-venvapt-transport-https ca-certificates gnupg lsb-release -y
