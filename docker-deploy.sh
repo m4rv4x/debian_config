@@ -50,7 +50,7 @@ echo "[+] RUNNING NEW CONTAINER : HEIMDAL"
 docker run -d --name heimdall -p 80:80 -p 8043:443 \
    --restart=unless-stopped \
    -v /var/run/docker.sock:/var/run/docker.sock \
-   containrrr/watchtower heimdall
+   linuxserver/heimdall heimdall
 ########################################################################
 echo "[+] RUNNING NEW CONTAINER : METUBE"
 docker run -d --name=metube -p 8081:8081 -v ${storage}/downloads:/downloads ghcr.io/alexta69/metube:latest
