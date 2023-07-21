@@ -16,7 +16,7 @@ alias gpt='python3 ~/gpt.cli gpt.py'
 # DEV
 alias activate='python3 -m venv myenv && source myenv/bin/activate'
 alias python='python3'
-export PATH="$PATH:$HOME/.rvm/bin"
+#export PATH="$PATH:$HOME/.rvm/bin"
 
 # LAPTOP SPECS
 # WIFI
