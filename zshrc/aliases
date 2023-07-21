@@ -27,3 +27,6 @@ alias wenable="nmcli device set $wiface managed yes"
 alias wdisable="nmcli device set $wiface managed no"
 # TOUCHPAD TAP
 synclient TapButton1=1
+
+# PRETTY ROOT
+alias su="sudo -E -u root zsh"
