@@ -105,6 +105,8 @@ docker run -d \
   -v ${storage}/config:/config \
   --restart unless-stopped \
   oznu/guacamole
-
+##################################################################################
+echo "[+] RUNNING NEW CONTAINER : NTFY"
+docker run -d --name=ntfy -p 8888:80 -it binwiederhier/ntfy
 echo "[!] DONE"
 
