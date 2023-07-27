@@ -27,8 +27,10 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 # Add some ZSH CONFIG
 cp ./zshrc/aliases ~/.aliases
 cp ./zshrc/ohmy.zshrc ~/.zshrc
+
 # Reload
-source .zshrc
+source ~/.zshrc
+
 # Clean up
 sudo apt autoremove -y
 sudo apt clean
