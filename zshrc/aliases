@@ -1,9 +1,13 @@
 # M4RV4X CUSTOM ZSHRC
 export VISUAL=micro                                                                         
 export EDITOR=micro
-alias nano='micro'
+alias reload="source ~/.zshrc"
+
+# TOUCHPAD TAP
+#synclient TapButton1=1
 
 # TOOLS
+alias nano='micro'
 alias la='exa -a --color=always --group-directories-first --icons'                                                                            
 alias ll='exa -al --color=always --group-directories-first --icons'
 alias ls='exa --color=always --group-directories-first --icons'
@@ -11,23 +15,19 @@ alias update='sudo apt update && sudo apt upgrade'
 alias http.server='python3 -m http.server'
 alias diskusage='sudo ncdu'
 alias ifconfig='sudo ifconfig'
-alias gpt='python3 ~/gpt.cli gpt.py'
 
 # DEV
 alias activate='python3 -m venv myenv && source myenv/bin/activate'
-alias python='python3'
 #export PATH="$PATH:$HOME/.rvm/bin"
 
 # LAPTOP SPECS
 # WIFI
-wiface="wlp7s0"
+wiface="wlan0"
 alias wconnect="nmcli device connect $wiface"
 alias wdisconnect="nmcli device disconnect $wiface"
 alias wreconnect="wdisconnect ; sleep 2 ; wconnect"
 alias wenable="nmcli device set $wiface managed yes"
 alias wdisable="nmcli device set $wiface managed no"
-# TOUCHPAD TAP
-synclient TapButton1=1
 
 # PRETTY ROOT
 alias su="sudo -E -u root zsh"
