@@ -31,3 +31,4 @@ alias wdisable="nmcli device set $wiface managed no"
 
 # PRETTY ROOT
 alias su="sudo -E -u root zsh"
+alias reload="source ~/.zshrc"
