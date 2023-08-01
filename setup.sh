@@ -30,7 +30,7 @@ cp ./zshrc/ohmy.zshrc ~/.zshrc
 
 # Reload
 source ~/.zshrc
-
+source ~/.aliases
 # Clean up
 sudo apt autoremove -y
 sudo apt clean
