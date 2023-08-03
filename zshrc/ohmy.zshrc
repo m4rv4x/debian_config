@@ -8,7 +8,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # obraun, bira, darkblood, dieter, finotime, jonathan, lambda, linuxonly, refined, rkj-repos, suvash, 
 ZSH_THEME="agnoster"
 
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
