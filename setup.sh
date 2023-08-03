@@ -5,21 +5,17 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install git curl wget -y
 
 # Install system admin packages
-sudo apt install htop nmap micro zsh exa -y
-sudo apt install byobu -y
-sudo apt install ncdu -y
-sudo apt install neofetch -y
-sudo apt install speedtest-cli -y
-sudo apt install open-ssl -y
-sudo apt install netcat -y
+sudo apt install htop nmap micro exa byobu ncdu neofetch -y
+sudo apt install speedtest-cli open-ssl netcat-y
 sudo apt install gcc g++ make -y
 
 # Install useful developer packages
-sudo apt install python3 -y
-sudo apt install pipx -y
-sudo apt install build-essential nodejs -y
+sudo apt install python3 pipx -y
+sudo apt install build-essential -y
 sudo apt install gnupg lsb-release -y
 
+# Install Shell Additions
+sudo apt install zsh zsh-antigen zsh-autosuggestions zsh-common zsh-syntax-highlighting zsh-theme-powerlevel9k
 # Install zsh and set as default shell
 chsh -s $(which zsh)
 # Install Oh My Zsh for better zsh
