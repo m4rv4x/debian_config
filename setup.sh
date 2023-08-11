@@ -94,8 +94,8 @@ if [[ "$COPY_CONFIG" =~ ^[yY](es)?$ ]]; then
     # Set the path to the script path from bash env
     SCRIPT_PATH=$(dirname "$(readlink -f "$0")")
 
-    cp "$SCRIPT_PATH/.config/zshrc/aliases" ~/.aliases
-    cp "$SCRIPT_PATH/.config/zshrc/ohmyzsh.rc" ~/.zshrc
+    cp "$SCRIPT_PATH/config/zshrc/aliases" ~/.aliases
+    cp "$SCRIPT_PATH/config/zshrc/ohmyzsh.rc" ~/.zshrc
     echo -e "\e[32mZSH CONFIG copied\e[0m"
 else
     echo -e "\e[33mSkipping copying config files\e[0m"
