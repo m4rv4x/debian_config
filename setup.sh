@@ -73,11 +73,12 @@ if dpkg -s zsh zsh-antigen zsh-autosuggestions zsh-common zsh-syntax-highlightin
 else
     echo -e "\e[33mZsh and shell additions are not installed\e[0m"
     sudo apt install zsh zsh-antigen zsh-autosuggestions zsh-common zsh-syntax-highlighting zsh-theme-powerlevel9k
+    # Install zsh and set as default shell
+    chsh -s $(which zsh)
 fi
-# Install zsh and set as default shell
-chsh -s $(which zsh)
+
 # Verify if Oh My Zsh is not installed before trying to install
-if dpkg -s ohmyzsh &> /dev/null; then
+if [ -d ~/.oh-my-ssh ]; then
     echo -e "\e[32mOh My Zsh is already installed\e[0m"
 else
     echo -e "\e[33mOh My Zsh is not installed\e[0m"
