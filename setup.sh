@@ -2,24 +2,56 @@
 
 # Update and upgrade packages
 sudo apt update && sudo apt upgrade -y
-sudo apt install git curl wget -y
+
+# Install git if it exists in the packet manager
+if dpkg -s git &> /dev/null; then
+    sudo apt install git -y
+fi
+
+# Install curl if it exists in the packet manager
+if dpkg -s curl &> /dev/null; then
+    sudo apt install curl -y
+fi
+
+# Install wget if it exists in the packet manager
+if dpkg -s wget &> /dev/null; then
+    sudo apt install wget -y
+fi
 
 # Install system admin packages
-sudo apt install htop nmap micro exa byobu ncdu neofetch -y
-sudo apt install speedtest-cli open-ssl netcat-y
-sudo apt install gcc g++ make -y
+if dpkg -s htop nmap micro exa byobu ncdu neofetch &> /dev/null; then
+    sudo apt install htop nmap micro exa byobu ncdu neofetch -y
+fi
+if dpkg -s speedtest-cli open-ssl netcat &> /dev/null; then
+    sudo apt install speedtest-cli open-ssl netcat -y
+fi
+if dpkg -s gcc g++ make &> /dev/null; then
+    sudo apt install gcc g++ make -y
+fi
 
 # Install useful developer packages
-sudo apt install python3 pipx -y
-sudo apt install build-essential -y
-sudo apt install gnupg lsb-release -y
+if dpkg -s python3 pipx &> /dev/null; then
+    sudo apt install python3 pipx -y
+fi
+if dpkg -s build-essential &> /dev/null; then
+    sudo apt install build-essential -y
+fi
+if dpkg -s gnupg lsb-release &> /dev/null; then
+    sudo apt install gnupg lsb-release -y
+fi
 
 # Install Shell Additions
-sudo apt install zsh zsh-antigen zsh-autosuggestions zsh-common zsh-syntax-highlighting zsh-theme-powerlevel9k
+if dpkg -s zsh zsh-antigen zsh-autosuggestions zsh-common zsh-syntax-highlighting zsh-theme-powerlevel9k &> /dev/null; then
+    sudo apt install zsh zsh-antigen zsh-autosuggestions zsh-common zsh-syntax-highlighting zsh-theme-powerlevel9k
+fi
 # Install zsh and set as default shell
 chsh -s $(which zsh)
-# Install Oh My Zsh for better zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# Verify if Oh My Zsh is not installed before trying to install
+if ! dpkg -s ohmyzsh &> /dev/null; then
+    # Install Oh My Zsh for better zsh
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
 # Add some ZSH CONFIG
 cp ./zshrc/aliases ~/.aliases
 cp ./zshrc/ohmy.zshrc ~/.zshrc

@@ -3,9 +3,6 @@ export VISUAL=micro
 export EDITOR=micro
 alias reload="source ~/.zshrc"
 
-# TOUCHPAD TAP
-#synclient TapButton1=1
-
 # TOOLS
 alias nano='micro'
 alias la='exa -a --color=always --group-directories-first --icons'                                                                            
@@ -21,6 +18,8 @@ alias activate='python3 -m venv myenv && source myenv/bin/activate'
 #export PATH="$PATH:$HOME/.rvm/bin"
 
 # LAPTOP SPECS
+# TOUCHPAD TAP
+#synclient TapButton1=1
 # WIFI
 wiface="wlan0"
 alias wconnect="nmcli device connect $wiface"
@@ -31,4 +30,3 @@ alias wdisable="nmcli device set $wiface managed no"
 
 # PRETTY ROOT
 alias su="sudo -E -u root zsh"
-alias reload="source ~/.zshrc"
