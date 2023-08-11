@@ -87,7 +87,7 @@ else
 fi
 # Add some ZSH CONFIG
 if [ -z "$COPY_CONFIG" ]; then
-    read -t 60 -p "Copy config files? (y/n): " COPY_CONFIG
+    read -t 10 -p "Copy config files? (y/n): " COPY_CONFIG
 fi
 
 if [[ "$COPY_CONFIG" =~ ^[yY](es)?$ ]]; then
