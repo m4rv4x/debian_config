@@ -34,7 +34,7 @@ else
     echo -e "\e[33mSystem admin packages are not installed\e[0m"
     sudo apt install htop nmap micro exa byobu ncdu neofetch -y
 fi
-if dpkg -s speedtest-cli open-ssl netcat &> /dev/null; then
+if dpkg -s speedtest-cli openssl ncat &> /dev/null; then
     echo -e "\e[32mSpeedtest-cli, open-ssl, and netcat are already installed\e[0m"
 else
     echo -e "\e[33mSpeedtest-cli, open-ssl, and netcat are not installed\e[0m"
