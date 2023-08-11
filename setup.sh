@@ -86,15 +86,22 @@ else
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 # Add some ZSH CONFIG
-cp ./zshrc/aliases ~/.aliases
-cp ./zshrc/ohmy.zshrc ~/.zshrc
-echo -e "\e[32mZSH CONFIG copied\e[0m"
+if [ -z "$COPY_CONFIG" ]; then
+    read -t 60 -p "Copy config files? (y/n): " COPY_CONFIG
+fi
+
+if [[ "$COPY_CONFIG" =~ ^[yY](es)?$ ]]; then
+    cp ./zshrc/aliases ~/.aliases
+    cp ./zshrc/ohmy.zshrc ~/.zshrc
+    echo -e "\e[32mZSH CONFIG copied\e[0m"
+else
+    echo -e "\e[33mSkipping copying config files\e[0m"
+fi
 
 # Reload
 echo -e "\e[32mRELOADING\e[0m"
 source ~/.zshrc
 source ~/.aliases
-
 # Clean up
 sudo apt autoremove -y
 sudo apt clean
