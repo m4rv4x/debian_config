@@ -103,8 +103,8 @@ fi
 
 # Reload
 echo -e "\e[32mRELOADING ALIASES\e[0m"
-source ~/.zshrc
 source ~/.aliases
+
 # Clean up
 sudo apt autoremove -y
 sudo apt clean
