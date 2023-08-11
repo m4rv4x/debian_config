@@ -78,7 +78,7 @@ else
 fi
 
 # Verify if Oh My Zsh is not installed before trying to install
-if [ -d ~/.oh-my-ssh ]; then
+if [ -d ~/.oh-my-zsh ]; then
     echo -e "\e[32mOh My Zsh is already installed\e[0m"
 else
     echo -e "\e[33mOh My Zsh is not installed\e[0m"
