@@ -102,7 +102,7 @@ else
 fi
 
 # Reload
-echo -e "\e[32mRELOADING\e[0m"
+echo -e "\e[32mRELOADING ALIASES\e[0m"
 source ~/.zshrc
 source ~/.aliases
 # Clean up
