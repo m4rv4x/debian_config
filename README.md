@@ -5,7 +5,13 @@
 - custom ZSH
 - some aliases
 
-  
+
+### Add your user to sudo on fresh debian (as ROOT)
+```
+echo "$USER ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+```
+
+### Install Script  
 ```
 ./setup.sh
 ```

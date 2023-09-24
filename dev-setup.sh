@@ -8,7 +8,7 @@ if dpkg -s nodejs &> /dev/null; then
     echo "nodejs is already installed"
 else
     # Install Latest node.js
-    curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
+    curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&
 fi
 
 # Verify if packages are installed before trying to install

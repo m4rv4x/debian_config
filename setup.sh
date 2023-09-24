@@ -2,6 +2,12 @@
 
 # Update only
 sudo apt update -y
+if $? != "0"; then
+	echo -e "Add user to sudoers file (README.md)"
+	exit 0
+else
+	echo -e "[OK] You are in sudo group"
+fi
 
 # Check if git is installed
 if dpkg -s git &> /dev/null; then
@@ -10,6 +16,14 @@ else
     echo -e "\e[33mGit is not installed\e[0m"
     sudo apt install git -y
 fi
+#
+if dpkg -s gh &> /dev/null; then
+    echo -e "\e[32mgh is already installed\e[0m"
+else
+    echo -e "\e[33mgh is not installed\e[0m"
+    sudo apt install gh -y
+fi
+
 
 # Install curl if it exists in the packet manager
 if dpkg -s curl &> /dev/null; then
@@ -72,9 +86,10 @@ if dpkg -s zsh zsh-antigen zsh-autosuggestions zsh-common zsh-syntax-highlightin
     echo -e "\e[32mZsh and shell additions are already installed\e[0m"
 else
     echo -e "\e[33mZsh and shell additions are not installed\e[0m"
-    sudo apt install zsh zsh-antigen zsh-autosuggestions zsh-common zsh-syntax-highlighting zsh-theme-powerlevel9k
+    sudo apt install zsh zsh-antigen zsh-autosuggestions zsh-common zsh-syntax-highlighting zsh-theme-powerlevel9k -y
     # Install zsh and set as default shell
     chsh -s $(which zsh)
+    echo "exec zsh" >> ~/.bashrc
 fi
 
 # Verify if Oh My Zsh is not installed before trying to install
@@ -87,7 +102,7 @@ else
 fi
 # Add some ZSH CONFIG
 if [ -z "$COPY_CONFIG" ]; then
-    read -t 10 -p "Copy config files? (y/n): " COPY_CONFIG
+    read -t 10 -p "Copy config files? (y/N): " COPY_CONFIG
 fi
 
 if [[ "$COPY_CONFIG" =~ ^[yY](es)?$ ]]; then
