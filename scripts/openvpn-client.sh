@@ -1,10 +1,9 @@
 #!/bin/bash
-if dpkg -s openvpn3 &> /dev/null; then
-    echo "OPENVPN already installed"
+if dpkg -s network-manager-openvpn-gnome &> /dev/null; then
+    echo "OPENVPN PLUGIN already installed"
 else
-    apt install apt-transport-https
-    curl -fsSL https://swupdate.openvpn.net/repos/openvpn-repo-pkg-key.pub | gpg --dearmor > /etc/apt/trusted.gpg.d/openvpn-repo-pkg-keyring.gpg
-    curl -fsSL https://swupdate.openvpn.net/community/openvpn3/repos/openvpn3-$DISTRO.list > /etc/apt/sources.list.d/openvpn3.list
     apt update
-    apt install openvpn3
+    apt install apt-transport-https nmcli nmtui network-manager-open-vpn-gnome
+    apt install network-manager-open-vpn
 fi
+nmcli connection import type openvpn file  ~/openvpn/profile.ovpn
