@@ -8,7 +8,7 @@ alias nano='micro'
 alias la='exa -a --color=always --group-directories-first --icons'                                                                            
 alias ll='exa -al --color=always --group-directories-first --icons'
 alias ls='exa --color=always --group-directories-first --icons'
-alias update='sudo apt update && sudo apt upgrade'
+alias update='sudo apt update && sudo apt upgrade && pipx upgrade-all && npm update'
 alias http.server='python3 -m http.server'
 alias diskusage='sudo ncdu'
 alias ifconfig='sudo ifconfig'
@@ -30,3 +30,12 @@ alias wdisable="nmcli device set $wiface managed no"
 
 # PRETTY ROOT
 alias su="sudo -E -u root zsh"
+
+# MY IP
+alias myip="curl ifconfig.me/ip"
+
+# YT_DLP only MP3
+alias yt-dlp="yt-dlp -x --audio-format mp3"
+
+# OPEN MYSQL AS ROOT
+alias mysql="sudo mysql -u root -p"
