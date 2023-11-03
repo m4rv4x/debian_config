@@ -116,6 +116,21 @@ else
     echo -e "\e[33mSkipping copying config files\e[0m"
 fi
 
+# Add some BYOBU CONFIG
+if [ -z "$COPY_CONFIG" ]; then
+    read -t 10 -p "Copy config files (& mouse support)? (y/N): " COPY_CONFIG
+fi
+
+if [[ "$COPY_CONFIG" =~ ^[yY](es)?$ ]]; then
+    # Set the path to the script path from bash env
+    SCRIPT_PATH=$(dirname "$(readlink -f "$0")")
+
+    cp "$SCRIPT_PATH/config/byobu/profile.tmux" ~/.byobu/profile.tmux
+    echo -e "\e[32mBYOBU CONFIG copied\e[0m"
+else
+    echo -e "\e[33mSkipping BYOBU copying config files\e[0m"
+fi
+
 # Reload
 echo -e "\e[32mRELOADING ALIASES\e[0m"
 source ~/.aliases
