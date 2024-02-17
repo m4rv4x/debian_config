@@ -2,12 +2,6 @@
 
 # Update only
 sudo apt update -y
-if $? != "0"; then
-	echo -e "Add user to sudoers file (README.md)"
-	exit 0
-else
-	echo -e "[OK] You are in sudo group"
-fi
 
 # Check if git is installed
 if dpkg -s git &> /dev/null; then
