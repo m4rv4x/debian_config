@@ -14,7 +14,7 @@ alias diskusage='sudo ncdu'
 alias ifconfig='sudo ifconfig'
 
 # DEV
-alias activate='python3 -m venv myenv && source myenv/bin/activate'
+alias activate='python3 -m venv myenv && source venv/bin/activate'
 #export PATH="$PATH:$HOME/.rvm/bin"
 
 # LAPTOP SPECS
